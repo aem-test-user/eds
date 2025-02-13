@@ -1,8 +1,12 @@
+{
 "plugins":[{
 	"id": "google-assist",
 	"title": "My customs",
-	"url": "https://www.google.com/"
 	"environments": ["edit","dev","preview","live","prod"],
+	"url": "https://www.google.com/",
 	"passConfig": true,
 	"passReferrer":true,
+	"isPalette":true,
+	"paletteRect":"top:50px;bottom:10px;right:10px;left:auto;width:400px;height:calc(100vh-60px)"
 }]
+}
