@@ -1,0 +1,8 @@
+"plugins":[{
+	"id": "google-assist",
+	"title": "My customs",
+	"url": "https://www.google.com/"
+	"environments": ["edit","dev","preview","live","prod"],
+	"passConfig": true,
+	"passReferrer":true,
+}]
