@@ -1,3 +1,7 @@
 mountpoints:
-  /: https://drive.google.com/drive/folders/1v4Eq5ASv1NLZ88BvaM7DpoxojpGGpkDJ
+  /: 
+  url: "https://author-p23458-e1003321.adobeaemcloud.com/bin/franklin.delivery/aem-test-user/eds/main"
+  type: "markup"
+  suffix: ".html"
+  
     
