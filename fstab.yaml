@@ -1,6 +1,6 @@
 mountpoints:
   /: 
-  url: "https://author-p23458-e1003321.adobeaemcloud.com/bin/delivery/aem-test-user/eds/main"
+  url: "https://author-p23458-e1003321.adobeaemcloud.com/delivery/aem-test-user/eds/main"
   type: "markup"
   suffix: ".html"
   
