@@ -84,7 +84,7 @@ async function handleSubmit(form) {
     form.setAttribute('data-submitting', 'false');
   }
 }
-
+//comments
 export default async function decorate(block) {
   const formLink = block.querySelector('a[href$=".json"]');
   if (!formLink) return;
