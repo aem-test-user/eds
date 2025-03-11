@@ -2,122 +2,88 @@
   display: grid;
   grid-auto-flow: row;
   align-items: center;
+  padding: 8px;
 }
 
 .form fieldset {
   display: grid;
   grid-auto-flow: row;
-  margin: 0;
+  gap: 8px;
   border: none;
   padding: 0;
 }
 
-.form form > .field-wrapper + .field-wrapper,
-.form form fieldset .field-wrapper + .field-wrapper {
-  margin-top: 24px;
-}
-
-.form form > .selection-wrapper + .selection-wrapper,
-.form form fieldset .selection-wrapper + .selection-wrapper {
-  margin-top: 0.25em;
-}
-
-@media (width >= 600px) {
-  .form fieldset {
-    grid-template-columns: repeat(2, auto);
-    gap: 0.25em 24px;
-  }
-
-  .form form > .selection-wrapper + .selection-wrapper,
-  .form form fieldset .field-wrapper + .field-wrapper,
-  .form form fieldset .selection-wrapper + .selection-wrapper {
-    margin-top: 0;
-  }
-}
-
 @media (width >= 900px) {
   .form fieldset {
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
   }
 }
 
-.form label,
 .form fieldset > legend {
-  margin-bottom: 0.25em;
-  font-size: var(--body-font-size-s);
   font-weight: 700;
+  font-size: var(--heading-font-size-xs);
 }
 
-.form .selection-wrapper label {
-  margin: 0;
-  font-weight: normal;
+.form label {
+  font-weight: 700;
+  font-size: var(--body-font-size-xs);
+  margin-bottom: 0.25em;
 }
 
 .form input,
 .form select,
 .form textarea {
-  box-sizing: border-box;
-  display: block;
-  width: 100%;
-  margin: 0;
-  padding: 0.5em;
-  border-radius: 4px;
-  border: 1px solid var(--dark-color);
-  background-color: var(--background-color);
-  color: var(--text-color);
   font-size: var(--body-font-size-s);
-  transition: border-color 0.2s;
+  width: 100%;
+  max-width: 50rem;
+  display: block;
+  padding: 12px 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
 .form textarea {
   resize: vertical;
 }
 
-.form input:hover,
-.form select:hover,
-.form textarea:hover {
+.form .selection-wrapper input {
+  width: 16px;
+}
+
+.form .selection-wrapper label {
+  margin-bottom: 0;
+}
+
+.form input:hover {
   border: 1px solid var(--text-color);
 }
 
-.form input:focus,
-.form select:focus,
-.form textarea:focus {
-  outline: 2px solid var(--link-color);
-  outline-offset: 2px;
-}
-
-.form .selection-wrapper input {
-  width: max-content;
-}
-
-@media (width >= 600px) {
-  .form input,
-  .form select,
-  .form textarea {
-    max-width: 50vw;
-  }
-
-  .form .button {
-    max-width: max-content;
-  }
-}
-
-@media (width >= 900px) {
-  .form input,
-  .form select,
-  .form textarea {
-    max-width: 33vw;
-  }
+.form .button {
+  max-width: 225px;
+  font-size: var(--body-font-size-m);
+  padding: 0.2em 0.4em;
 }
 
 .form .field-wrapper.selection-wrapper {
   grid-auto-flow: column;
   justify-content: start;
-  gap: 1ch;
+  gap: 16px;
 }
 
-.form label[data-required]::after {
-  content: '*';
+.form .field-wrapper > label {
+  order: -1;
+}
+
+.form .field-wrapper.selection-wrapper > label {
+  order: 1;
+}
+
+.form input[required] + label::after {
+  content: "*";
   color: firebrick;
   margin-inline-start: 1ch;
 }
@@ -125,35 +91,35 @@
 .form .toggle-wrapper .switch {
   position: relative;
   display: inline-block;
-  width: 52px;
-  height: 28px;
+  width: 48px;
+  height: 24px;
 }
 
 .form .toggle-wrapper input {
   opacity: 0;
-  width: 52px;
-  height: 28px;
+  width: 0;
+  height: 0;
 }
 
 .form .toggle-wrapper .slider {
   position: absolute;
   cursor: pointer;
   inset: 0;
-  border-radius: 28px;
   background-color: var(--dark-color);
-  transition: background-color 0.2s;
+  transition: 0.4s;
+  border-radius: 30px;
 }
 
 .form .toggle-wrapper .slider::before {
-  content: '';
   position: absolute;
-  width: 24px;
-  height: 24px;
-  top: 2px;
+  content: "";
+  height: 20px;
+  width: 20px;
   left: 2px;
-  border-radius: 50%;
+  bottom: 2px;
   background-color: var(--background-color);
-  transition: transform 0.2s;
+  transition: 0.4s;
+  border-radius: 50%;
 }
 
 .form .toggle-wrapper input:checked + .slider {

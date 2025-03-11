@@ -11,7 +11,6 @@
  */
 
 /* eslint-env browser */
-console.log("FORM AEMJS FILE");
 function sampleRUM(checkpoint, data) {
   // eslint-disable-next-line max-len
   const timeShift = () => (window.performance ? window.performance.now() : Date.now() - window.hlx.rum.firstReadTime);
