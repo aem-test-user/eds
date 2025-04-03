@@ -1,10 +1,5 @@
 {
   "mappings": [
-    "/content/eds-demo/:/",
-    "/content/eds-demo/configuration:/.helix/config.json"
-  ],
-  "includes:" [
-    "/content/eds-demo/"
+    "/content/eds-demo/:/"
   ]
 }
-
