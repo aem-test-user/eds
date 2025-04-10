@@ -1,6 +1,6 @@
 mountpoints:
   /: 
-  url: "https://localhost:8000/bin/franklin.delivery/aem-test-user/eds-demos/main"
+  url: "https://author-p23458-e1003321.adobeaemcloud.com/bin/franklin.delivery/aem-test-user/eds/main"
   type: "markup"
   suffix: ".html"
   
