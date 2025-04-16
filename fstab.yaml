@@ -1,6 +1,6 @@
 mountpoints:
   /: 
-  url: "https://author-p23458-e1003321.adobeaemcloud.com/bin/franklin.delivery/aem-test-user/eds/main"
+  url: "https://drive.google.com/drive/u/1/folders/1v4Eq5ASv1NLZ88BvaM7DpoxojpGGpkDJ"
   type: "markup"
   suffix: ".html"
   
